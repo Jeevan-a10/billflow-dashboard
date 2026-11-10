@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import {
+  FALLBACK_DATA,
   healthAPI,
   plansAPI,
   customersAPI,
@@ -14,14 +15,16 @@ const BillingContext = createContext(null);
 
 export function BillingProvider({ children }) {
   const [activeTab, setActiveTab] = useState('overview');
-  const [health, setHealth] = useState({ online: false, mode: 'checking' });
-  const [plans, setPlans] = useState([]);
-  const [customers, setCustomers] = useState([]);
-  const [selectedCustomerId, setSelectedCustomerId] = useState('');
-  const [subscriptions, setSubscriptions] = useState([]);
-  const [invoices, setInvoices] = useState([]);
-  const [analytics, setAnalytics] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [health, setHealth] = useState({ online: true, mode: 'live' });
+  const [plans, setPlans] = useState(FALLBACK_DATA.plans);
+  const [customers, setCustomers] = useState(FALLBACK_DATA.customers);
+  const [selectedCustomerId, setSelectedCustomerId] = useState(
+    FALLBACK_DATA.customers[0]?.customerId || ''
+  );
+  const [subscriptions, setSubscriptions] = useState(FALLBACK_DATA.subscriptions);
+  const [invoices, setInvoices] = useState(FALLBACK_DATA.invoices);
+  const [analytics, setAnalytics] = useState(FALLBACK_DATA.analytics);
+  const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState(null);
 
   // Modals state
