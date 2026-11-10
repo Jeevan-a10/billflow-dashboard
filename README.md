@@ -3,6 +3,7 @@
 > Modern Next.js 16 SaaS subscription billing, dynamic proration calculator, metered consumption tracker, itemized invoice state machine, and HMAC webhook audit portal.
 
 [![BillFlow Dashboard CI](https://github.com/Jeevan-a10/billflow-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/Jeevan-a10/billflow-dashboard/actions/workflows/ci.yml)
+[![Live on Vercel](https://img.shields.io/badge/Vercel-Live%20Dashboard-black.svg?logo=vercel&logoColor=white)](https://billflow-dashboard.vercel.app/)
 [![Connected Backend API](https://img.shields.io/badge/Render-API%20Online-46E3B7.svg?logo=render&logoColor=white)](https://billflow-api-bsxr.onrender.com/health)
 [![Next.js Version](https://img.shields.io/badge/Next.js-16.4.5-black.svg?style=flat&logo=next.js)](https://nextjs.org/)
 [![React Version](https://img.shields.io/badge/React-19.3.0-blue.svg?style=flat&logo=react)](https://react.dev/)
@@ -10,6 +11,7 @@
 [![Tests Passing](https://img.shields.io/badge/tests-12%20passing-success.svg)](tests/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+🚀 **Live Production Dashboard**: [`https://billflow-dashboard.vercel.app`](https://billflow-dashboard.vercel.app)  
 ⚡ **Connected Backend API**: [`https://billflow-api-bsxr.onrender.com`](https://billflow-api-bsxr.onrender.com)
 
 ---
