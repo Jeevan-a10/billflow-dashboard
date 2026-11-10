@@ -3,11 +3,14 @@
 > Modern Next.js 16 SaaS subscription billing, dynamic proration calculator, metered consumption tracker, itemized invoice state machine, and HMAC webhook audit portal.
 
 [![BillFlow Dashboard CI](https://github.com/Jeevan-a10/billflow-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/Jeevan-a10/billflow-dashboard/actions/workflows/ci.yml)
+[![Connected Backend API](https://img.shields.io/badge/Render-API%20Online-46E3B7.svg?logo=render&logoColor=white)](https://billflow-api-bsxr.onrender.com/health)
 [![Next.js Version](https://img.shields.io/badge/Next.js-16.4.5-black.svg?style=flat&logo=next.js)](https://nextjs.org/)
 [![React Version](https://img.shields.io/badge/React-19.3.0-blue.svg?style=flat&logo=react)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38bdf8.svg?style=flat&logo=tailwindcss)](https://tailwindcss.com/)
 [![Tests Passing](https://img.shields.io/badge/tests-12%20passing-success.svg)](tests/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+⚡ **Connected Backend API**: [`https://billflow-api-bsxr.onrender.com`](https://billflow-api-bsxr.onrender.com)
 
 ---
 
