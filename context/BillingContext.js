@@ -70,6 +70,22 @@ export function BillingProvider({ children }) {
     refreshAll();
   }, []);
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const tabParam = params.get('tab');
+      if (tabParam && ['overview', 'subscriptions', 'metered', 'invoices', 'webhooks'].includes(tabParam)) {
+        setActiveTab(tabParam);
+      }
+      if (params.get('modal') === 'upgrade' && subscriptions.length > 0) {
+        setUpgradeModal({ isOpen: true, subscription: subscriptions[0] });
+      }
+      if (params.get('modal') === 'invoice' && invoices.length > 0) {
+        setInvoiceModal({ isOpen: true, invoice: invoices[0] });
+      }
+    }
+  }, [subscriptions, invoices]);
+
   const activeCustomer = customers.find((c) => c.customerId === selectedCustomerId) || customers[0] || null;
 
   const value = {
