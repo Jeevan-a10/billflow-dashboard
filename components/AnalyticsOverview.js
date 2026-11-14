@@ -46,7 +46,7 @@ export default function AnalyticsOverview() {
         {/* MRR Card */}
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:border-emerald-300 transition-all">
           <div className="flex items-center justify-between text-slate-500">
-            <span className="text-xs font-semibold uppercase tracking-wider">MRR (Monthly Recurring)</span>
+            <span className="text-xs font-medium text-slate-500">MRR (Monthly Recurring)</span>
             <div className="p-2 bg-emerald-50 text-emerald-600 rounded-lg">
               <CurrencyDollarIcon className="w-5 h-5" />
             </div>
@@ -65,7 +65,7 @@ export default function AnalyticsOverview() {
         {/* ARR Card */}
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:border-emerald-300 transition-all">
           <div className="flex items-center justify-between text-slate-500">
-            <span className="text-xs font-semibold uppercase tracking-wider">ARR (Annual Run Rate)</span>
+            <span className="text-xs font-medium text-slate-500">ARR (Annual Run Rate)</span>
             <div className="p-2 bg-indigo-50 text-indigo-600 rounded-lg">
               <TrendingUpIcon className="w-5 h-5" />
             </div>
@@ -84,7 +84,7 @@ export default function AnalyticsOverview() {
         {/* Active Subscribers */}
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:border-emerald-300 transition-all">
           <div className="flex items-center justify-between text-slate-500">
-            <span className="text-xs font-semibold uppercase tracking-wider">Active Customers</span>
+            <span className="text-xs font-medium text-slate-500">Active Customers</span>
             <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
               <UsersIcon className="w-5 h-5" />
             </div>
@@ -104,7 +104,7 @@ export default function AnalyticsOverview() {
         {/* Churn Rate */}
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:border-emerald-300 transition-all">
           <div className="flex items-center justify-between text-slate-500">
-            <span className="text-xs font-semibold uppercase tracking-wider">Cohort Churn Rate</span>
+            <span className="text-xs font-medium text-slate-500">Cohort Churn Rate</span>
             <div className="p-2 bg-purple-50 text-purple-600 rounded-lg">
               <ChartPieIcon className="w-5 h-5" />
             </div>
@@ -125,7 +125,7 @@ export default function AnalyticsOverview() {
 
       {/* Secondary Metrics Bar: ARPU, LTV, Interval Split */}
       <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
-        <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wider mb-4">
+        <h3 className="text-xs font-semibold text-slate-800 mb-4">
           Unit Economics & Contract Intervals
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -148,7 +148,7 @@ export default function AnalyticsOverview() {
               <span>/</span>
               <span className="text-amber-700">{yearlyPercent}% Annual (-15%)</span>
             </div>
-            <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden mt-1.5 flex">
+            <div className="w-full bg-slate-100 h-2 rounded overflow-hidden mt-1.5 flex">
               <div style={{ width: `${monthlyPercent}%` }} className="bg-emerald-500 h-full" />
               <div style={{ width: `${yearlyPercent}%` }} className="bg-amber-500 h-full" />
             </div>
@@ -161,7 +161,7 @@ export default function AnalyticsOverview() {
         {/* Tier Distribution (2 cols) */}
         <div className="lg:col-span-2 bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wider">
+            <h3 className="text-xs font-semibold text-slate-800">
               Subscription Plan Breakdown
             </h3>
             <span className="text-xs text-slate-500 font-medium">
@@ -191,7 +191,7 @@ export default function AnalyticsOverview() {
                     </div>
                   </div>
 
-                  <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden mt-2">
+                  <div className="w-full bg-slate-200 h-2 rounded overflow-hidden mt-2">
                     <div
                       style={{ width: `${Math.max(percent, 4)}%` }}
                       className={`h-full ${
@@ -221,7 +221,7 @@ export default function AnalyticsOverview() {
         {/* Quick Simulator & Engine Shortcuts (1 col) */}
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
           <div>
-            <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wider mb-3">
+            <h3 className="text-xs font-semibold text-slate-800 mb-3">
               Engine Shortcuts
             </h3>
             <p className="text-xs text-slate-500 mb-4 leading-relaxed">

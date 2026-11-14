@@ -116,10 +116,10 @@ export default function MeteredUsagePanel() {
       <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center space-x-2">
-            <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
+            <h2 className="text-sm font-semibold text-slate-900">
               Metered Consumption & Quota Engine
             </h2>
-            <span className="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full">
+            <span className="text-[10px] bg-amber-100 text-amber-800 font-medium px-2 py-0.5 rounded-md">
               Real-time Ingestion
             </span>
           </div>
@@ -152,7 +152,7 @@ export default function MeteredUsagePanel() {
         {/* API Requests */}
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-3">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+            <span className="text-xs font-medium text-slate-700">
               API Requests
             </span>
             <span className="text-xs font-bold text-slate-900 font-mono">
@@ -160,7 +160,7 @@ export default function MeteredUsagePanel() {
             </span>
           </div>
 
-          <div className="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+          <div className="w-full bg-slate-100 h-2 rounded overflow-hidden">
             <div
               style={{ width: `${Math.min(100, apiOverage.usagePercentage)}%` }}
               className={`h-full transition-all ${
@@ -184,7 +184,7 @@ export default function MeteredUsagePanel() {
         {/* Cloud Storage */}
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-3">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+            <span className="text-xs font-medium text-slate-700">
               Cloud Storage
             </span>
             <span className="text-xs font-bold text-slate-900 font-mono">
@@ -192,7 +192,7 @@ export default function MeteredUsagePanel() {
             </span>
           </div>
 
-          <div className="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+          <div className="w-full bg-slate-100 h-2 rounded overflow-hidden">
             <div
               style={{ width: `${Math.min(100, storageOverage.usagePercentage)}%` }}
               className={`h-full transition-all ${
@@ -216,7 +216,7 @@ export default function MeteredUsagePanel() {
         {/* Compute Minutes */}
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-3">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+            <span className="text-xs font-medium text-slate-700">
               Compute Runtime
             </span>
             <span className="text-xs font-bold text-slate-900 font-mono">
@@ -224,7 +224,7 @@ export default function MeteredUsagePanel() {
             </span>
           </div>
 
-          <div className="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+          <div className="w-full bg-slate-100 h-2 rounded overflow-hidden">
             <div
               style={{ width: `${Math.min(100, computeOverage.usagePercentage)}%` }}
               className={`h-full transition-all ${
@@ -254,7 +254,7 @@ export default function MeteredUsagePanel() {
             <div className="p-1.5 bg-amber-50 text-amber-600 rounded-lg">
               <BoltIcon className="w-4 h-4" />
             </div>
-            <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wider">
+            <h3 className="text-xs font-semibold text-slate-800">
               High-Throughput Meter Ingestion Pipeline
             </h3>
           </div>
@@ -262,7 +262,7 @@ export default function MeteredUsagePanel() {
           <form onSubmit={handleRecordUsage} className="space-y-4 text-xs">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                <label className="block font-medium text-slate-700 mb-1.5">
                   Metric Identifier:
                 </label>
                 <select
@@ -278,7 +278,7 @@ export default function MeteredUsagePanel() {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                <label className="block font-medium text-slate-700 mb-1.5">
                   Consumed Delta Quantity:
                 </label>
                 <input
@@ -293,7 +293,7 @@ export default function MeteredUsagePanel() {
 
             <div>
               <div className="flex items-center justify-between mb-1.5">
-                <label className="font-bold text-slate-700 uppercase tracking-wider">
+                <label className="font-medium text-slate-700">
                   Idempotency Key (Replay Protection):
                 </label>
                 <button
@@ -320,7 +320,7 @@ export default function MeteredUsagePanel() {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex items-center space-x-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2 rounded-lg shadow-xs transition-all active:scale-95 cursor-pointer disabled:opacity-50"
+                className="flex items-center space-x-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-4 py-2 rounded-lg shadow-xs transition-colors cursor-pointer disabled:opacity-50"
               >
                 <PlusIcon className="w-3.5 h-3.5" />
                 <span>{loading ? 'Ingesting...' : 'Ingest Meter Record'}</span>
@@ -332,7 +332,7 @@ export default function MeteredUsagePanel() {
         {/* Total Overage Projection Box (1 col) */}
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
           <div>
-            <div className="flex items-center space-x-2 text-slate-800 font-bold text-xs uppercase tracking-wider mb-3">
+            <div className="flex items-center space-x-2 text-slate-800 font-semibold text-xs mb-3">
               <ShieldCheckIcon className="w-4 h-4 text-emerald-600" />
               <span>Projected Overage Fee</span>
             </div>
